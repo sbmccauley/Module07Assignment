@@ -64,9 +64,9 @@ form.addEventListener('submit', (e) => {
 // DELETE EMPLOYEE
 table.addEventListener('click', (e) => {
     e.preventDefault() 
-    if (confirm(`Are you sure you want to delete ${e.target.parentElement.parentElement.innerText}?`)) {
+    if (confirm(`Are you sure you want to delete ${e.target.parentElement.parentElement.cells[1].innerText}?`)) {
         table.deleteRow(e.target.parentElement.parentElement.rowIndex)
-        alert(`${e.target.parentElement.parentElement.innerText} has been successfully deleted.`)
+        alert(`${e.target.parentElement.parentElement.cells[1].innerText} has been successfully deleted.`)
         employeeCount()
     }
 }
